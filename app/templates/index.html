@@ -1,10 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container">
-        <h1>Hello world</h1>
-        <p>
-            Your username is KellyInnovation
-        </p>
+    <div class="well">
+    	{% for team in groups %}
+   		<p>
+     		<b>{{ loop.index }}:</b> {{ team }}  
+     
+     		{% if loop.first %}
+    	   		<i></i>
+     		{% endif %}
+     
+		    {% if loop.last %}
+		    	<i></i>
+		    {% endif %}
+		     
+   		</p>
+ 		{% endfor %}
+ 
+		<ul>
+		   	{% for x in loopdata %}
+		 	   <li class="{{ loop.cycle('odd', 'even') }}">{{ team }}</li>
+		   	{% endfor %}
+		</ul>
     </div>
+	<a 
+		href="{{ url_for('index')}}"
+		class="btn btn-primary btn-lg btn-block" 
+		>
+			Create New Teams
+	</a>
+
 {% endblock %}
