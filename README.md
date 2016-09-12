@@ -1,10 +1,8 @@
-# Flask Package
+After cloning, run 
 
-Create a flask app as a package and a run script to actually run the application
+```
+python3 random_groups.py NUMBER_PER_GROUP
+```
 
-## Setup
-* `mkvirtualenv -p python3 flask-package`
-* `pip install -r requirements.txt`
+The default per group is 2
 
-## Run the flask app
-`python run.py`
